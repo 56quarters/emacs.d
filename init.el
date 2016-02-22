@@ -71,6 +71,12 @@
 
 
 ;; Rust code completion
+;;
+;; Since we're making use of multirust, might as well use the stable
+;; toolchain to install and use racer.
+;;
+;; Additionally, we use a globally accessible checkout of Rust master
+;; for code completion from the stdlib.
 (use-package racer
   :ensure t
   :init
