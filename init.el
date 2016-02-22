@@ -1,7 +1,13 @@
-;;; something --- by emacs init file
+;;; init.el --- My emacs init file
+;;;
 ;;; Commentary:
-;;; blah blah blah
+;;;
+;;; Initial bootstrap to install `use-package` then a bunch of calls to it to
+;;; install all the various modules we make use of.  Some random configuration
+;;; at the end that doesn't really fit anywhere else.
+;;;
 ;;; Code:
+;;;
 
 
 ;; Initial bootstrap to get use-package so that we can set up
@@ -93,3 +99,7 @@
 (setq-default c-default-style "java")
 (setq backup-inhibited t)
 (setq auto-save-default nil)
+
+
+(provide 'init)
+;;; init.el ends here
