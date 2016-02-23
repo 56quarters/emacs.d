@@ -6,6 +6,15 @@
 ;;; install all the various modules we make use of.  Some random configuration
 ;;; at the end that doesn't really fit anywhere else.
 ;;;
+;;; You'll have to run the following out of band commands to get this configuration
+;;; working.  Mostly, this is just the Rust stuff.
+;;;
+;;; `curl -sf https://raw.githubusercontent.com/brson/multirust/master/blastoff.sh | sh`
+;;; `multirust update stable`
+;;; `cargo install racer`
+;;; `sudo mkdir -p /usr/local/src`
+;;; `sudo git clone https://github.com/rust-lang/rust.git /usr/local/src/rust`
+;;;
 ;;; Code:
 ;;;
 
