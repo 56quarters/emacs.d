@@ -11,6 +11,7 @@
 ;;;
 ;;; `curl -sf https://raw.githubusercontent.com/brson/multirust/master/blastoff.sh | sh`
 ;;; `multirust update stable`
+;;; `multirust default stable`
 ;;; `cargo install racer`
 ;;; `sudo mkdir -p /usr/local/src`
 ;;; `sudo git clone https://github.com/rust-lang/rust.git /usr/local/src/rust`
