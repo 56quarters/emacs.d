@@ -9,9 +9,9 @@
 ;;; You'll have to run the following out of band commands to get this configuration
 ;;; working.  Mostly, this is just the Rust stuff.
 ;;;
-;;; `curl -sf https://raw.githubusercontent.com/brson/multirust/master/blastoff.sh | sh`
-;;; `multirust update stable`
-;;; `multirust default stable`
+;;; `curl https://sh.rustup.rs -sSf | sh`
+;;; `rustup update stable`
+;;; `rustup default stable`
 ;;; `cargo install racer`
 ;;; `sudo mkdir -p /usr/local/src`
 ;;; `sudo git clone https://github.com/rust-lang/rust.git /usr/local/src/rust`
@@ -93,7 +93,7 @@
   (add-hook 'rust-mode-hook #'racer-mode)
   (add-hook 'racer-mode-hook #'eldoc-mode)
   :config
-  (setq racer-cmd "~/.multirust/toolchains/stable/cargo/bin/racer")
+  (setq racer-cmd "racer")
   (setq racer-rust-src-path "/usr/local/src/rust/src/"))
 
 
