@@ -101,6 +101,13 @@
 (use-package rust-mode :ensure t)
 
 
+;; Cargo
+(use-package cargo
+  :ensure t
+  :init
+  (add-hook 'rust-mode-hook #'cargo-minor-mode))
+
+
 ;; Toml
 (use-package toml-mode :ensure t)
 
