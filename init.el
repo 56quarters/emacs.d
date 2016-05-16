@@ -106,10 +106,12 @@
 ;; completion from the stdlib.
 (use-package racer
   :ensure t
-  :diminish racer-mode eldoc-mode
+  :diminish racer-mode
   :init
   (add-hook 'rust-mode-hook #'racer-mode)
   (add-hook 'racer-mode-hook #'eldoc-mode)
+  (add-hook 'racer-mode-hook (diminish 'eldoc-mode))
+
   :config
   (setq racer-cmd "racer")
   (setq racer-rust-src-path "/usr/local/src/rust/src/"))
