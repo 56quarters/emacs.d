@@ -33,9 +33,18 @@
   (package-install 'use-package))
 
 
+;; Cargo
+(use-package cargo
+  :ensure t
+  :diminish cargo-minor-mode
+  :init
+  (add-hook 'rust-mode-hook #'cargo-minor-mode))
+
+
 ;; Completion
 (use-package company
   :ensure t
+  :diminish company-mode
   :init
   (add-hook 'after-init-hook 'global-company-mode)
   (global-set-key (kbd "TAB") #'company-indent-or-complete-common)
@@ -51,8 +60,18 @@
   (setq jedi:complete-on-dot t))
 
 
+;; Battery usage
+(use-package fancy-battery
+  :ensure t
+  :config
+  (fancy-battery-mode))
+
+
 ;; Syntax checking
-(use-package flycheck :ensure t :config (global-flycheck-mode))
+(use-package flycheck
+  :ensure t
+  :diminish flycheck-mode
+  :config (global-flycheck-mode))
 
 
 ;; Syntax checking for Rust
@@ -62,6 +81,7 @@
 ;; Git added/removed/modified annotation
 (use-package git-gutter
   :ensure t
+  :diminish git-gutter-mode
   :config
   (global-git-gutter-mode t)
   (custom-set-variables '(git-gutter:always-show-separator t))
@@ -82,13 +102,11 @@
 
 ;; Rust code completion
 ;;
-;; Since we're making use of multirust, might as well use the stable
-;; toolchain to install and use racer.
-;;
-;; Additionally, we use a globally accessible checkout of Rust master
-;; for code completion from the stdlib.
+;; We use a globally accessible checkout of Rust master for code
+;; completion from the stdlib.
 (use-package racer
   :ensure t
+  :diminish racer-mode eldoc-mode
   :init
   (add-hook 'rust-mode-hook #'racer-mode)
   (add-hook 'racer-mode-hook #'eldoc-mode)
@@ -101,11 +119,11 @@
 (use-package rust-mode :ensure t)
 
 
-;; Cargo
-(use-package cargo
-  :ensure t
-  :init
-  (add-hook 'rust-mode-hook #'cargo-minor-mode))
+;; Mode line
+(use-package spaceline-config
+  :ensure spaceline
+  :config
+  (spaceline-emacs-theme))
 
 
 ;; Toml
@@ -122,7 +140,7 @@
 (setq-default c-default-style "java")
 (setq backup-inhibited t)
 (setq auto-save-default nil)
-
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (provide 'init)
 ;;; init.el ends here
