@@ -43,8 +43,8 @@
   :diminish company-mode
   :init
   (add-hook 'after-init-hook 'global-company-mode)
-  (global-set-key (kbd "TAB") #'company-indent-or-complete-common)
   :config
+  (global-set-key (kbd "TAB") #'company-indent-or-complete-common)
   (setq company-tooltip-align-annotations t))
 
 
