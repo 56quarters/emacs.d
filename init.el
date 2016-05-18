@@ -33,14 +33,6 @@
   (package-install 'use-package))
 
 
-;; Cargo
-(use-package cargo
-  :ensure t
-  :diminish cargo-minor-mode
-  :init
-  (add-hook 'rust-mode-hook #'cargo-minor-mode))
-
-
 ;; Completion
 (use-package company
   :ensure t
