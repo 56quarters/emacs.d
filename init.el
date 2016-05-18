@@ -33,6 +33,9 @@
   (package-install 'use-package))
 
 
+(setq use-package-verbose t)
+
+
 ;; Completion
 (use-package company
   :ensure t
@@ -63,7 +66,8 @@
 (use-package flycheck
   :ensure t
   :diminish flycheck-mode
-  :config (global-flycheck-mode))
+  :config
+  (global-flycheck-mode))
 
 
 ;; Syntax checking for Rust
@@ -99,14 +103,12 @@
 (use-package racer
   :ensure t
   :diminish racer-mode
-  :init
-  (add-hook 'rust-mode-hook #'racer-mode)
-  (add-hook 'racer-mode-hook #'eldoc-mode)
-  (add-hook 'racer-mode-hook (diminish 'eldoc-mode))
-
   :config
   (setq racer-cmd "racer")
   (setq racer-rust-src-path "/usr/local/src/rust/src/"))
+  (add-hook 'rust-mode-hook #'racer-mode)
+  (add-hook 'racer-mode-hook #'eldoc-mode)
+  (add-hook 'racer-mode-hook (diminish 'eldoc-mode))
 
 
 ;; Rust
