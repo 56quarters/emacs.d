@@ -39,6 +39,7 @@
 ;; Completion
 (use-package company
   :ensure t
+  :defer 0
   :diminish company-mode
   :init
   (add-hook 'after-init-hook 'global-company-mode)
@@ -50,6 +51,7 @@
 ;; Completion backend for Python
 (use-package company-jedi
   :ensure t
+  :defer 0
   :config
   (add-to-list 'company-backends 'company-jedi)
   (setq jedi:complete-on-dot t))
@@ -58,6 +60,7 @@
 ;; Battery usage
 (use-package fancy-battery
   :ensure t
+  :defer 0
   :config
   (fancy-battery-mode))
 
@@ -65,18 +68,20 @@
 ;; Syntax checking
 (use-package flycheck
   :ensure t
+  :defer 0
   :diminish flycheck-mode
   :config
   (global-flycheck-mode))
 
 
 ;; Syntax checking for Rust
-(use-package flycheck-rust :ensure t)
+(use-package flycheck-rust :ensure t :defer 0)
 
 
 ;; Git added/removed/modified annotation
 (use-package git-gutter
   :ensure t
+  :defer 0
   :diminish git-gutter-mode
   :config
   (global-git-gutter-mode t)
@@ -86,12 +91,15 @@
 
 
 ;; Markdown
-(use-package markdown-mode :ensure t)
+(use-package markdown-mode
+  :ensure t
+  :defer 0)
 
 
 ;; Good looking theme
 (use-package monokai-theme
   :ensure t
+  :defer 0
   :config
   (custom-set-variables '(custom-enabled-themes (quote (monokai)))))
 
@@ -102,6 +110,7 @@
 ;; completion from the stdlib.
 (use-package racer
   :ensure t
+  :defer 0
   :diminish racer-mode
   :config
   (setq racer-cmd "racer")
@@ -112,22 +121,29 @@
 
 
 ;; Rust
-(use-package rust-mode :ensure t)
+(use-package rust-mode
+  :ensure t
+  :defer 0)
 
 
 ;; Mode line
 (use-package spaceline-config
   :ensure spaceline
+  :defer 0
   :config
   (spaceline-emacs-theme))
 
 
 ;; Toml
-(use-package toml-mode :ensure t)
+(use-package toml-mode
+  :ensure t
+  :defer 0)
 
 
 ;; Yaml
-(use-package yaml-mode :ensure t)
+(use-package yaml-mode
+  :ensure t
+  :defer 0)
 
 
 ;; Misc other config
