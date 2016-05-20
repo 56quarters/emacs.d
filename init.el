@@ -104,6 +104,14 @@
   (custom-set-variables '(custom-enabled-themes (quote (monokai)))))
 
 
+;; File browser
+(use-package neotree
+  :ensure t
+  :defer 0
+  :config
+  (global-set-key [f8] 'neotree-toggle))
+
+
 ;; Rust code completion
 ;;
 ;; We use a globally accessible checkout of Rust master for code
