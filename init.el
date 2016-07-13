@@ -142,6 +142,12 @@
   (spaceline-emacs-theme))
 
 
+;; SASS mode
+(use-package sass-mode
+  :ensure t
+  :defer 0)
+
+
 ;; Toml
 (use-package toml-mode
   :ensure t
