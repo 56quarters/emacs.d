@@ -89,6 +89,13 @@
   (custom-set-variables '(git-gutter:separator-sign " "))
   (set-face-foreground 'git-gutter:separator "gray"))
 
+;; Git porcelain inside emacs
+(use-package magit
+  :ensure t
+  :defer 0
+  :config
+  (global-set-key (kbd "C-x g") 'magit-status))
+
 
 ;; Markdown
 (use-package markdown-mode
