@@ -78,6 +78,10 @@
 (use-package flycheck-rust :ensure t :defer 0)
 
 
+;; Syntax checking for protobuf files
+(use-package flycheck-protobuf :ensure t :defer 0)
+
+
 ;; Git added/removed/modified annotation
 (use-package git-gutter
   :ensure t
@@ -88,13 +92,6 @@
   (custom-set-variables '(git-gutter:always-show-separator t))
   (custom-set-variables '(git-gutter:separator-sign " "))
   (set-face-foreground 'git-gutter:separator "gray"))
-
-;; Git porcelain inside emacs
-(use-package magit
-  :ensure t
-  :defer 0
-  :config
-  (global-set-key (kbd "C-x g") 'magit-status))
 
 
 ;; Markdown
@@ -117,6 +114,10 @@
   :defer 0
   :config
   (global-set-key [f8] 'neotree-toggle))
+
+
+;; Protobuf support
+(use-package protobuf-mode :ensure t :defer 0)
 
 
 ;; Rust code completion
