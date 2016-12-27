@@ -6,16 +6,6 @@
 ;;; install all the various modules we make use of.  Some random configuration
 ;;; at the end that doesn't really fit anywhere else.
 ;;;
-;;; You'll have to run the following out of band commands to get this configuration
-;;; working.  Mostly, this is just the Rust stuff.
-;;;
-;;; `curl https://sh.rustup.rs -sSf | sh`
-;;; `rustup update stable`
-;;; `rustup default stable`
-;;; `cargo install racer`
-;;; `sudo mkdir -p /usr/local/src`
-;;; `sudo git clone https://github.com/rust-lang/rust.git /usr/local/src/rust`
-;;;
 ;;; Code:
 ;;;
 
@@ -130,10 +120,9 @@
   :diminish racer-mode
   :config
   (setq racer-cmd "racer")
-  (setq racer-rust-src-path "/usr/local/src/rust/src/"))
   (add-hook 'rust-mode-hook #'racer-mode)
   (add-hook 'racer-mode-hook #'eldoc-mode)
-  (add-hook 'racer-mode-hook (diminish 'eldoc-mode))
+  (add-hook 'racer-mode-hook (diminish 'eldoc-mode)))
 
 
 ;; Rust
