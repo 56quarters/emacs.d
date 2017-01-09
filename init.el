@@ -84,6 +84,14 @@
   (set-face-foreground 'git-gutter:separator "gray"))
 
 
+;; M-x command completion
+(use-package helm
+  :ensure t
+  :defer 0
+  :config
+  (global-set-key (kbd "M-x") 'helm-M-x))
+
+
 ;; Markdown
 (use-package markdown-mode
   :ensure t
