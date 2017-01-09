@@ -111,9 +111,6 @@
 
 
 ;; Rust code completion
-;;
-;; We use a globally accessible checkout of Rust master for code
-;; completion from the stdlib.
 (use-package racer
   :ensure t
   :defer 0
