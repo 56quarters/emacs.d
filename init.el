@@ -68,10 +68,6 @@
 (use-package flycheck-rust :ensure t :defer 0)
 
 
-;; Syntax checking for protobuf files
-(use-package flycheck-protobuf :ensure t :defer 0)
-
-
 ;; Git added/removed/modified annotation
 (use-package git-gutter
   :ensure t
