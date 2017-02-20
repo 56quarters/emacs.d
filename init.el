@@ -80,6 +80,12 @@
   (set-face-foreground 'git-gutter:separator "gray"))
 
 
+;; Handlebars templates
+(use-package handlebars-mode
+  :ensure t
+  :defer 0)
+
+
 ;; M-x command completion
 (use-package helm
   :ensure t
@@ -148,6 +154,12 @@
 
 ;; Toml
 (use-package toml-mode
+  :ensure t
+  :defer 0)
+
+
+;; Ocaml
+(use-package tuareg
   :ensure t
   :defer 0)
 
