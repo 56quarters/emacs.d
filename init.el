@@ -132,6 +132,14 @@
   (add-hook 'racer-mode-hook (diminish 'eldoc-mode)))
 
 
+;; RPM spec files
+(use-package rpm-spec-mode
+  :ensure t
+  :defer 0
+  :config
+  (add-to-list 'auto-mode-alist '("\\.spectemplate\\'" . rpm-spec-mode)))
+
+
 ;; Rust
 (use-package rust-mode
   :ensure t
