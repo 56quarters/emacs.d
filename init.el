@@ -94,6 +94,27 @@
   (global-set-key (kbd "M-x") 'helm-M-x))
 
 
+;; Use the language server protocol
+(use-package lsp-mode
+  :ensure t
+  :defer 0
+  :config
+  (add-hook 'rust-mode #'lsp-mode)
+  (add-hook 'python-mode #'lsp-mode))
+
+
+;; Rust support for LSP
+(use-package lsp-rust
+  :ensure t
+  :defer 0)
+
+
+;; Python support for LSP
+(use-package lsp-python
+  :ensure t
+  :defer 0)
+
+
 ;; Markdown
 (use-package markdown-mode
   :ensure t
