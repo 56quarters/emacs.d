@@ -41,7 +41,9 @@
 ;; Completion backend for Go
 (use-package company-go
   :ensure t
-  :defer 0)
+  :defer 0
+  :config
+  (add-to-list 'company-backends 'company-go))
 
 
 ;; Completion backend for Python
