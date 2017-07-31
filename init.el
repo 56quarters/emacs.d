@@ -136,8 +136,8 @@
 (use-package monokai-theme
   :ensure t
   :defer 0
-  :config
-  (custom-set-variables '(custom-enabled-themes (quote (monokai)))))
+  :init
+  (load-theme 'monokai t))
 
 
 ;; File browser
