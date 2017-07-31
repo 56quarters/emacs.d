@@ -38,6 +38,12 @@
   (setq company-tooltip-align-annotations t))
 
 
+;; Completion backend for Go
+(use-package company-go
+  :ensure t
+  :defer 0)
+
+
 ;; Completion backend for Python
 (use-package company-jedi
   :ensure t
@@ -78,6 +84,11 @@
   (custom-set-variables '(git-gutter:always-show-separator t))
   (custom-set-variables '(git-gutter:separator-sign " "))
   (set-face-foreground 'git-gutter:separator "gray"))
+
+;; Go language
+(use-package go-mode
+  :ensure t
+  :defer 0)
 
 
 ;; Handlebars templates
