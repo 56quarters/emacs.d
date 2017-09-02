@@ -218,6 +218,7 @@
 (setq-default c-default-style "java")
 (setq backup-inhibited t)
 (setq auto-save-default nil)
+(setq save-abbrevs nil)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (provide 'init)
