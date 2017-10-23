@@ -55,6 +55,14 @@
   (setq jedi:complete-on-dot t))
 
 
+;; Dockerfile mode
+(use-package dockerfile-mode
+  :ensure t
+  :defer 0
+  :config
+  (add-to-list 'auto-mode-alist '("\\.dockerfile\\'" . dockerfile-mode)))
+
+
 ;; Battery usage
 (use-package fancy-battery
   :ensure t
