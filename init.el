@@ -23,9 +23,6 @@
   (package-install 'use-package))
 
 
-(setq use-package-verbose t)
-
-
 ;; Completion
 (use-package company
   :ensure t
@@ -53,6 +50,12 @@
   :config
   (add-to-list 'company-backends 'company-jedi)
   (setq jedi:complete-on-dot t))
+
+
+;; Required for the diminish keyword
+(use-package diminish
+  :ensure t
+  :defer 0)
 
 
 ;; Dockerfile mode
