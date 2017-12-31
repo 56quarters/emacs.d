@@ -132,13 +132,6 @@
   :ensure t
   :defer 0)
 
-
-;; Python support for LSP
-(use-package lsp-python
-  :ensure t
-  :defer 0)
-
-
 ;; Markdown
 (use-package markdown-mode
   :ensure t
