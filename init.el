@@ -220,6 +220,7 @@
 (setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
 (setq-default c-default-style "java")
+(setq-default truncate-lines t)
 (setq backup-inhibited t)
 (setq auto-save-default nil)
 (setq save-abbrevs nil)
