@@ -52,6 +52,12 @@
   (setq jedi:complete-on-dot t))
 
 
+;; Completion for Terraform config
+(use-package company-terraform
+  :ensure t
+  :defer 0)
+
+
 ;; Required for the diminish keyword
 (use-package diminish
   :ensure t
@@ -194,6 +200,12 @@
 
 ;; SASS mode
 (use-package sass-mode
+  :ensure t
+  :defer 0)
+
+
+;; Terraform
+(use-package terraform-mode
   :ensure t
   :defer 0)
 
