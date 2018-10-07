@@ -33,10 +33,9 @@
   :config
   (global-set-key (kbd "TAB") #'company-indent-or-complete-common)
   (setq company-tooltip-align-annotations t)
-  ;; stop messing up the name of suggestions
   (setq company-dabbrev-downcase 0)
-  ;; suggest things immediately
-  (setq company-idle-delay 0))
+  (setq company-idle-delay 0)
+  (setq company-minimum-prefix-length 2))
 
 
 
