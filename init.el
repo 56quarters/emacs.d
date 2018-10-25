@@ -106,7 +106,7 @@
   (global-git-gutter-mode t)
   (custom-set-variables '(git-gutter:always-show-separator t))
   (custom-set-variables '(git-gutter:separator-sign " "))
-  (set-face-foreground 'git-gutter:separator "gray"))
+  (custom-set-variables '(git-gutter:modified-sign "~")))
 
 ;; Go language
 (use-package go-mode
