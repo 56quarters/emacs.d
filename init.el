@@ -102,11 +102,17 @@
   :ensure t
   :defer 0
   :diminish git-gutter-mode
+  :init
+  (linum-mode)
+  (setq-default 'linum-format "%4d \u2502")
+  (git-gutter:linum-setup)
   :config
   (global-git-gutter-mode t)
   (custom-set-variables '(git-gutter:always-show-separator t))
   (custom-set-variables '(git-gutter:separator-sign " "))
-  (custom-set-variables '(git-gutter:modified-sign "~")))
+  (custom-set-variables '(git-gutter:modified-sign "~"))
+
+  )
 
 ;; Go language
 (use-package go-mode
