@@ -193,14 +193,12 @@
   :ensure t
   :defer 0)
 
-
-;; Mode line
+;; Configure spaceline / powerline
 (use-package spaceline-config
   :ensure spaceline
   :defer 0
   :config
-  (spaceline-emacs-theme))
-
+  (powerline-default-theme))
 
 ;; SASS mode
 (use-package sass-mode
