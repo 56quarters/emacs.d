@@ -9,7 +9,6 @@
 ;;; Code:
 ;;;
 
-
 ;; Initial bootstrap to get use-package so that we can set up
 ;; the rest of the packages and configuration defined below.
 (require 'package)
