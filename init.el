@@ -30,11 +30,11 @@
   :init
   (add-hook 'after-init-hook 'global-company-mode)
   :config
-  (global-set-key (kbd "TAB") #'company-indent-or-complete-common)
   (setq company-tooltip-align-annotations t)
   (setq company-dabbrev-downcase 0)
   (setq company-idle-delay 0)
-  (setq company-minimum-prefix-length 2))
+  (setq company-minimum-prefix-length 2)
+  :bind ([?\t] . company-indent-or-complete-common))
 
 
 
@@ -110,7 +110,8 @@
 ;; Go language
 (use-package go-mode
   :ensure t
-  :defer 0)
+  :defer 0
+  :bind ("M-." . godef-jump))
 
 
 ;; Handlebars templates
@@ -123,8 +124,7 @@
 (use-package helm
   :ensure t
   :defer 0
-  :config
-  (global-set-key (kbd "M-x") 'helm-M-x))
+  :bind ("M-x" . helm-M-x))
 
 
 ;; Use the language server protocol
