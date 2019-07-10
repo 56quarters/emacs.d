@@ -37,7 +37,6 @@
   :bind ([?\t] . company-indent-or-complete-common))
 
 
-
 ;; Completion backend for Go
 (use-package company-go
   :ensure t
@@ -93,7 +92,9 @@
 
 
 ;; Syntax checking for Rust
-(use-package flycheck-rust :ensure t :defer 0)
+(use-package flycheck-rust
+  :ensure t
+  :defer 0)
 
 
 ;; Git added/removed/modified annotation
@@ -106,6 +107,7 @@
   (custom-set-variables '(git-gutter:always-show-separator t))
   (custom-set-variables '(git-gutter:separator-sign " "))
   (custom-set-variables '(git-gutter:modified-sign "~")))
+
 
 ;; Go language
 (use-package go-mode
@@ -141,6 +143,7 @@
   :ensure t
   :defer 0)
 
+
 ;; Markdown
 (use-package markdown-mode
   :ensure t
@@ -164,7 +167,9 @@
 
 
 ;; Protobuf support
-(use-package protobuf-mode :ensure t :defer 0)
+(use-package protobuf-mode
+  :ensure t
+  :defer 0)
 
 
 ;; Rust code completion
@@ -192,12 +197,14 @@
   :ensure t
   :defer 0)
 
-;; Configure spaceline / powerline
+
+;;Configure spaceline / powerline
 (use-package spaceline-config
   :ensure spaceline
   :defer 0
   :config
   (powerline-default-theme))
+
 
 ;; SASS mode
 (use-package sass-mode
