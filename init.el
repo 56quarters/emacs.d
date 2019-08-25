@@ -51,7 +51,11 @@
   :defer 0
   :config
   (add-to-list 'company-backends 'company-jedi)
-  (setq jedi:complete-on-dot t))
+  (setq jedi:complete-on-dot t)
+  (setq jedi:environment-root "jedi")
+  (setq jedi:environment-virtualenv
+        (append python-environment-virtualenv
+                '("--python" "/usr/bin/python3"))))
 
 
 ;; Completion for Terraform config
