@@ -138,6 +138,13 @@
   (add-hook 'rust-mode #'lsp-mode)
   (add-hook 'python-mode #'lsp-mode))
 
+
+;; Lua language
+(use-package lua-mode
+  :ensure t
+  :defer 0)
+
+
 ;; Markdown
 (use-package markdown-mode
   :ensure t
