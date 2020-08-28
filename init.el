@@ -173,6 +173,12 @@
   :defer 0)
 
 
+;; Puppet support
+(use-package puppet-mode
+  :ensure t
+  :defer 0)
+
+
 ;; Rust code completion
 (use-package racer
   :ensure t
