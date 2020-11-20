@@ -126,6 +126,12 @@
   :bind ("M-x" . helm-M-x))
 
 
+;; Jsonnet templates
+(use-package jsonnet-mode
+  :ensure t
+  :defer 0)
+
+
 ;; Use the language server protocol
 (use-package lsp-mode
   :ensure t
