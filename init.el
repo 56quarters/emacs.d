@@ -90,6 +90,12 @@
   (global-flycheck-mode))
 
 
+;; Syntax checking for Pony
+(use-package flycheck-pony
+  :ensure t
+  :defer 0)
+
+
 ;; Syntax checking for Rust
 (use-package flycheck-rust
   :ensure t
@@ -167,6 +173,13 @@
   :defer 0
   :config
   (global-set-key [f8] 'neotree-toggle))
+
+
+
+;; Pony support
+(use-package ponylang-mode
+  :ensure t
+  :defer 0)
 
 
 ;; Protobuf support
