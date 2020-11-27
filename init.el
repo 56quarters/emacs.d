@@ -175,11 +175,12 @@
   (global-set-key [f8] 'neotree-toggle))
 
 
-
 ;; Pony support
 (use-package ponylang-mode
   :ensure t
-  :defer 0)
+  :defer 0
+  :bind
+  ([f6] . ponylang-menu))
 
 
 ;; Protobuf support
