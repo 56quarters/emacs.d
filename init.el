@@ -147,6 +147,12 @@
   (add-hook 'python-mode #'lsp-mode))
 
 
+;; Language server UI niceties
+(use-package lsp-ui
+  :ensure t
+  :defer 0)
+
+
 ;; Lua language
 (use-package lua-mode
   :ensure t
